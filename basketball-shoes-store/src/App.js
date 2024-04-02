@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import BrandFilter from './components/BrandFilter';
 import ShoeList from './components/ShoeList';
-import BrandTable from './components/BrandBar';
+import BrandBar from './components/BrandBar';
 
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
 
   return (
     <div className="App">
+      <img src={process.env.PUBLIC_URL + '/background.png'} alt="Background" className="background-image"/>
       <header className="App-header">
         {/* Other content */}
         <BrandBar setSelectedBrand={setSelectedBrand} selectedBrand={selectedBrand} />
