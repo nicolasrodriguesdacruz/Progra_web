@@ -1,19 +1,22 @@
-import React, { useState } from 'react';
-import BrandFilter from './components/BrandFilter';
-import ShoeList from './components/ShoeList';
-import BrandBar from './components/BrandBar';
-
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-  const [selectedBrand, setSelectedBrand] = useState('all');
-
   return (
     <div className="App">
-      <img src={process.env.PUBLIC_URL + '/background.png'} alt="Background" className="background-image"/>
       <header className="App-header">
-        {/* Other content */}
-        <BrandBar setSelectedBrand={setSelectedBrand} selectedBrand={selectedBrand} />
-        {/* Where you display the shoes */}
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
       </header>
     </div>
   );

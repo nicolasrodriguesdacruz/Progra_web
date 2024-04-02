@@ -1,8 +1,5 @@
 .App {
-  position: relative; /* This sets the positioning context */
-  min-height: 100vh; /* Minimum height to the viewport height */
   text-align: center;
-  overflow: hidden; /* Ensures the image doesn't cause scrollbars if it's too big */
 }
 
 .App-logo {
@@ -17,63 +14,19 @@
 }
 
 .App-header {
-  
-  background-image: url('/background.png'); 
-  background-size: cover; 
-  background-position: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
-
-.brand-selector {
-  padding: 10px;
-  margin: 20px;
-  background-color: white;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  font-size: 16px;
-}
-
-.brand-bar {
-  display: flex; /* Aligns items in a row */
-  justify-content: center; /* Centers items horizontally */
-  list-style: none; /* Removes default list styling */
-  padding: 0;
-  margin: 0;
-  background-color: #333; /* Or any color that fits your design */
-  overflow-x: auto; /* Makes it scrollable horizontally on small screens */
-}
-
-.brand-item {
-  padding: 10px 20px; /* Adjust padding as needed */
-  cursor: pointer;
-  color: white; /* Text color */
-  text-transform: uppercase; /* Uppercase text */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
-}
-
-.brand-item:hover {
-  background-color: #555; /* Color change on hover */
-}
-
-.brand-item.active {
-  border-color: #61dafb; /* Highlight color on hover or active item */
-  border-radius: 2rem; /* Rounded borders for the highlight */
-}
-
-.background-image {
-  position: fixed; /* Fixed or absolute, depending on your needs */
-  top: 0;
-  left: 0;
-  width: 100vw; /* Viewport width */
-  height: 100vh; /* Viewport height */
-  object-fit: cover; /* Cover the viewport without stretching */
-  z-index: -1; /* Send it to the back */
-}
-
 
 @keyframes App-logo-spin {
   from {
