@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import BrandFilter from './components/BrandFilter';
 import ShoeList from './components/ShoeList';
-import BrandTable from './components/BrandTable';
+import BrandTable from './components/BrandBar';
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         {/* Other content */}
-        <BrandTable setSelectedBrand={setSelectedBrand} />
+        <BrandBar setSelectedBrand={setSelectedBrand} selectedBrand={selectedBrand} />
         {/* Where you display the shoes */}
       </header>
     </div>
