@@ -22,7 +22,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  background-image: url('/basketball-background.png'); 
+  background-image: url('/background.png'); 
   background-size: cover; 
   background-position: center;
 }
@@ -39,6 +39,30 @@
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   font-size: 16px;
+}
+
+.brand-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  max-width: 600px; /* Adjust based on your layout */
+  margin: auto;
+}
+
+.brand-item {
+  padding: 10px;
+  background-color: #FFF;
+  color: #000;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.brand-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 @keyframes App-logo-spin {
