@@ -6,9 +6,12 @@ function App() {
   const [selectedBrand, setSelectedBrand] = useState('all');
 
   return (
-    <div>
-      <BrandFilter setSelectedBrand={setSelectedBrand} />
-      <ShoeList selectedBrand={selectedBrand} />
+    <div className="App">
+      <header className="App-header">
+        {/* Other content */}
+        <BrandFilter setSelectedBrand={setSelectedBrand} />
+        {/* Where you display the shoes */}
+      </header>
     </div>
   );
 }
