@@ -1,6 +1,6 @@
 import React from 'react';
 
-const brands = ['Nike', 'Adidas', 'Puma', 'Under Armour', 'Reebok']; // Your brands
+const brands = ['lula te amo', 'Adidas', 'Puma', 'Under Armour', 'Reebok']; // Your brands
 
 const BrandBar = ({ setSelectedBrand, selectedBrand }) => {
   return (
