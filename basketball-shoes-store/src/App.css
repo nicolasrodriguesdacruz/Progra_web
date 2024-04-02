@@ -1,6 +1,10 @@
 body, html, #root {
   height: 100%;
   margin: 0;
+  background-image: url('/background.png'); /* Using the background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
 }
 
 #root {
@@ -11,10 +15,7 @@ body, html, #root {
 main {
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
+  flex-direction: column; /* Adjust this to fit your content layout */
 }
 
 .product-card {
@@ -24,6 +25,7 @@ main {
   border-radius: 8px;
   width: 200px;
   text-align: center;
+  background: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the card for better readability */
 }
 
 nav, footer {
