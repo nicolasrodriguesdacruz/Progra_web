@@ -1,5 +1,6 @@
 .App {
-  position: relative; /* This makes it a positioning context for absolutely positioned children */
+  position: relative; /* This sets the positioning context */
+  min-height: 100vh; /* Minimum height to the viewport height */
   text-align: center;
   overflow: hidden; /* Ensures the image doesn't cause scrollbars if it's too big */
 }
@@ -37,37 +38,42 @@
 }
 
 .brand-bar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0.5rem;
-  background-color: #282c34; /* Match this to your navbar background */
+  display: flex; /* Aligns items in a row */
+  justify-content: center; /* Centers items horizontally */
+  list-style: none; /* Removes default list styling */
+  padding: 0;
+  margin: 0;
+  background-color: #333; /* Or any color that fits your design */
+  overflow-x: auto; /* Makes it scrollable horizontally on small screens */
 }
 
 .brand-item {
-  padding: 0.5rem 1rem;
-  color: white; /* Match this to your navbar item color */
-  text-transform: uppercase;
+  padding: 10px 20px; /* Adjust padding as needed */
   cursor: pointer;
-  border: 2px solid transparent; /* Prepare for hover effect */
-  transition: all 0.3s ease;
+  color: white; /* Text color */
+  text-transform: uppercase; /* Uppercase text */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-.brand-item:hover,
+.brand-item:hover {
+  background-color: #555; /* Color change on hover */
+}
+
 .brand-item.active {
   border-color: #61dafb; /* Highlight color on hover or active item */
   border-radius: 2rem; /* Rounded borders for the highlight */
 }
 
 .background-image {
-  position: absolute;
+  position: fixed; /* Fixed or absolute, depending on your needs */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Ensures the image stays in the background */
-  object-fit: cover; /* Covers the available space without stretching */
+  width: 100vw; /* Viewport width */
+  height: 100vh; /* Viewport height */
+  object-fit: cover; /* Cover the viewport without stretching */
+  z-index: -1; /* Send it to the back */
 }
+
 
 @keyframes App-logo-spin {
   from {
