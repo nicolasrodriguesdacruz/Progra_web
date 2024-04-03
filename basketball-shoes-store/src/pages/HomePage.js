@@ -1,4 +1,4 @@
-import backgroundImage from '../assets/images/background.png';
+import backgroundImage from '../assets/background.png';
 
 import React from 'react';
 import ProductCard from '../components/ProductCard';
