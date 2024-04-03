@@ -1,12 +1,11 @@
 import React from 'react';
-import logoImage from 'public/images/logo.png'; 
 
 const NavBar = () => {
   return (
     <nav style={navStyle}>
       <div style={logoContainerStyle}>
         <span style={titleStyle}>BasketKicks</span>
-        <img src={logoImage} alt="BasketKicks" style={logoStyle} />
+        <img src={url('/logo.png')} alt="BasketKicks" style={logoStyle} />
       </div>
       <div>
         <a href="#nike" style={linkStyle}>Nike</a>
