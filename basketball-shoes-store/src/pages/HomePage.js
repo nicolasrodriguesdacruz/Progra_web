@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductCard from '../components/ProductCard';
 import products from '../data/products';
-import background from './assets/background';
+import background from './assets/background.png';
 
 const HomePage = () => {
   return (
