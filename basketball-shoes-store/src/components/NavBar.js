@@ -5,14 +5,13 @@ const NavBar = () => {
     <nav style={navStyle}>
       <div style={logoContainerStyle}>
         <span style={titleStyle}>BasketKicks</span>
-        <img src={url('/logo.png')} alt="BasketKicks" style={logoStyle} />
+        <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="BasketKicks" style={logoStyle} />
       </div>
       <div>
         <a href="#nike" style={linkStyle}>Nike</a>
         <a href="#adidas" style={linkStyle}>Adidas</a>
         <a href="#puma" style={linkStyle}>Puma</a>
         <a href="#under-armour" style={linkStyle}>Under Armour</a>
-        {/* Añade más marcas según sea necesario */}
       </div>
     </nav>
   );
@@ -20,7 +19,7 @@ const NavBar = () => {
 
 const navStyle = {
   display: 'flex',
-  justifyContent: 'space-between', // Cambiado para un mejor espaciado
+  justifyContent: 'space-between', 
   alignItems: 'center',
   background: 'rgba(0, 0, 0, 0.8)',
   padding: '1rem',
@@ -32,8 +31,8 @@ const logoContainerStyle = {
 };
 
 const logoStyle = {
-  height: '50px', // Ajusta el tamaño según tus necesidades
-  marginRight: '10px', // Añade un poco de espacio entre el logo y el título
+  height: '50px', 
+  marginRight: '10px', 
 };
 
 const titleStyle = {
