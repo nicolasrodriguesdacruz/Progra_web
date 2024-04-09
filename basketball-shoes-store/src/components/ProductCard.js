@@ -21,7 +21,12 @@ const cardStyle = {
   padding: '1rem',
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
   transition: 'transform 0.3s, box-shadow 0.3s',
+  display: 'flex', // Set the display to flex
+  flexDirection: 'column', // Stack flex items vertically
+  alignItems: 'center', // Center items horizontally in the container
+  textAlign: 'center', // Center the text inside each flex item
 };
+
 
 const imageStyle = {
   maxWidth: '100%',
