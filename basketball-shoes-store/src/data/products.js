@@ -4,14 +4,14 @@ import shoe2 from '../assets/shoe2';
 const products = [
   {
     id: 1,
-    name: "Basketball Shoe 1",
+    name: "LEBRON 9 Low Liverpool",
     price: "100",
     imageUrl: shoe1,
-    description: "High-quality basketball shoe for professional players."
+    description: "The king shoes with Liverpool's colors"
   },
   {
     id: 2,
-    name: "Basketball Shoe 2",
+    name: "KYRIE 7 WEATHERMAN",
     price: "120",
     imageUrl: shoe2, 
     description: "Stylish and comfortable shoe with excellent ankle support."
