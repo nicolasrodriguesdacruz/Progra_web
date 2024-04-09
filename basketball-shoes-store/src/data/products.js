@@ -1,5 +1,5 @@
-import shoe1 from '../assets/shoe1';
-import shoe2 from '../assets/shoe2';
+import shoe1 from '../assets/shoe1.jpg';
+import shoe2 from '../assets/shoe2.jpg';
 
 const products = [
   {
@@ -16,7 +16,6 @@ const products = [
     imageUrl: shoe2, 
     description: "Stylish and comfortable shoe with excellent ankle support."
   },
-  // Add more products as needed
 ];
 
 export default products;
