@@ -8,13 +8,11 @@ body, html {
   background-attachment: fixed;
 }
 
-/* If you're using React Router or have multiple pages, you might want to keep #root styles */
 #root {
   display: flex;
   flex-direction: column;
 }
 
-/* Style the main content area */
 main {
   flex-grow: 1; /* If you're using flexbox in #root, this will make main take up all available space */
   display: flex; /* If you want to center your cards horizontally */
@@ -44,10 +42,13 @@ nav a:hover {
   border-radius: 5px;
 }
 
-/* Footer styles if you have a footer */
-footer {
-  padding: 1rem;
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000; 
   color: white;
   text-align: center;
-  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 0;
 }
