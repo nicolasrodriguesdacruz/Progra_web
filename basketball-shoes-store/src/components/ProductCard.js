@@ -4,6 +4,7 @@ const ProductCard = ({ product }) => {
   return (
     <div style={cardStyle}>
       <img src={product.imageUrl} alt={product.name} style={imageStyle} />
+      <img src="../assets/shoe1.jpg" alt="test" />
       <h3>{product.name}</h3>
       <p>{product.description}</p>
       <p>${product.price}</p>
