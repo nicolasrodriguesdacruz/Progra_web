@@ -1,10 +1,11 @@
 import React from 'react';
-import ProductCard from '../components/ProductCard';
+import ProductCard from './ProductCard';
 import products from '../data/products';
+import './styles.css'; 
 
 const HomePage = () => {
   return (
-    <div className="home-page">
+    <div className="product-list">
       {products.map(product => (
         <ProductCard key={product.id} product={product} />
       ))}

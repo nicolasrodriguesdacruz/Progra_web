@@ -52,3 +52,12 @@ nav a:hover {
   text-align: center;
   padding: 1rem 0;
 }
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust minmax for card width */
+  grid-gap: 1rem; /* This adds space between the cards */
+  padding: 1rem; /* Optional: Adds space inside the container around the cards */
+  justify-content: center; /* This will center the grid items (cards) in the container if they don't fill the entire width */
+}
+
