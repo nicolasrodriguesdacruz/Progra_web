@@ -1,5 +1,5 @@
-import shoe1 from './assets/shoe1.jpg';
-import shoe2 from './assets/shoe2.jpg';
+import shoe1 from './assets/shoe1';
+import shoe2 from './assets/shoe2';
 
 const products = [
   {
