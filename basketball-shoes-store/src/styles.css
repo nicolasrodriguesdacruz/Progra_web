@@ -55,9 +55,22 @@ nav a:hover {
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust minmax for card width */
-  grid-gap: 1rem; /* This adds space between the cards */
-  padding: 1rem; /* Optional: Adds space inside the container around the cards */
-  justify-content: center; /* This will center the grid items (cards) in the container if they don't fill the entire width */
+  grid-template-columns: 1fr; /* Una sola columna para dispositivos móviles */
+  grid-gap: 1rem; /* Esto añade espacio entre las tarjetas */
+  padding: 1rem; /* Esto añade espacio dentro del contenedor alrededor de las tarjetas */
 }
 
+/* Media query para tablets y pantallas de tamaño mediano: dos columnas */
+@media (min-width: 600px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas para pantallas medianas */
+  }
+}
+
+/* Media query para escritorios y pantallas grandes */
+@media (min-width: 1024px) {
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas ajustables para pantallas grandes */
+    justify-content: center; /* Esto centrará los elementos de la cuadrícula (tarjetas) en el contenedor si no llenan todo el ancho */
+  }
+}
