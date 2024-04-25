@@ -8,10 +8,9 @@ const NavBar = () => {
 
       </div>
       <div>
-        <a href="#nike" style={linkStyle}>Nike</a>
-        <a href="#adidas" style={linkStyle}>Adidas</a>
-        <a href="#puma" style={linkStyle}>Puma</a>
-        <a href="#under-armour" style={linkStyle}>Under Armour</a>
+      <Link to="/">Productos</Link>
+      <Link to="/carrito">Carrito</Link>
+      <Link to="/contacto">Contáctenos</Link>
       </div>
     </nav>
   );
