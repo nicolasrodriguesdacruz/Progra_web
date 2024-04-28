@@ -1,23 +1,28 @@
-import React from 'react';
-//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { useState } from 'react';
 import NavBar from './components/NavBar';
-import HomePage from './pages/HomePage'; 
-//import CartPage from './pages/CartPage';
-//import ContactPage from './pages/ContactPage';
+import HomePage from './pages/HomePage';
 import Footer from './components/Footer';
-import './styles.css'; 
+import CartPopUp from './components/CartPopUp';
+import ContactPopUp from './components/ContactPopUp';
+import './styles.css';
 
 const App = () => {
+  const [isCartVisible, setIsCartVisible] = useState(false);
+  const [isContactVisible, setIsContactVisible] = useState(false);
+
   return (
-    <Router>
-      <NavBar />
-      <Switch>
-        <Route exact path="/" component={HomePage} /> {/* Set HomePage as the default */}
-        {/* <Route path="/carrito" component={CartPage} />*/}
-        {/* <Route path="/contacto" component={ContactPage} />*/}
-      </Switch>
+    <>
+      <NavBar 
+        openCart={() => setIsCartVisible(true)} 
+        openContact={() => setIsContactVisible(true)} 
+      />
+      <HomePage />
+      
+      {isCartVisible && <CartPopUp closeCart={() => setIsCartVisible(false)} />}
+      {isContactVisible && <ContactPopUp closeContact={() => setIsContactVisible(false)} />}
+
       <Footer />
-    </Router>
+    </>
   );
 };
 

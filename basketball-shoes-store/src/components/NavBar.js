@@ -1,16 +1,15 @@
 import React from 'react';
 
-const NavBar = () => {
+const NavBar = ({ openCart, openContact }) => {
   return (
     <nav style={navStyle}>
       <div style={logoContainerStyle}>
         <span style={titleStyle}>BasketKicks</span>
-
       </div>
       <div>
-      <Link to="/">Productos</Link>
-      <Link to="/carrito">Carrito</Link>
-      <Link to="/contacto">Contáctenos</Link>
+        {/* Removed Link and replaced with button or div that calls the appropriate function on click */}
+        <button style={linkStyle} onClick={() => openCart()}>Carrito</button>
+        <button style={linkStyle} onClick={() => openContact()}>Contáctenos</button>
       </div>
     </nav>
   );
