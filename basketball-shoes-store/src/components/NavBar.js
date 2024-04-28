@@ -30,6 +30,7 @@ const logoContainerStyle = {
 };
 
 const logoStyle = {
+  background: transparent,
   height: '50px', 
   marginRight: '10px', 
 };
@@ -41,7 +42,7 @@ const titleStyle = {
 };
 
 const linkStyle = {
-  color: 'white',
+  color: 'black',
   textDecoration: 'none',
   margin: '0 10px',
   padding: '5px 10px',
