@@ -1,18 +1,19 @@
 import React from 'react';
+import logo from '../assets/logo.png';  
 
 const NavBar = ({ openCart, openContact }) => {
-  return (
-    <nav style={navStyle}>
-      <div style={logoContainerStyle}>
-        <span style={titleStyle}>BasketKicks</span>
-      </div>
-      <div>
-        {/* Removed Link and replaced with button or div that calls the appropriate function on click */}
-        <button style={linkStyle} onClick={() => openCart()}>Carrito</button>
-        <button style={linkStyle} onClick={() => openContact()}>Contáctenos</button>
-      </div>
-    </nav>
-  );
+    return (
+        <nav style={navStyle}>
+            <div style={logoContainerStyle}>
+                <img src={logo} alt="BasketKicks Logo" style={logoStyle} />
+                <span style={titleStyle}>BasketKicks</span>
+            </div>
+            <div>
+                <button style={linkStyle} onClick={() => openCart()}>Carrito</button>
+                <button style={linkStyle} onClick={() => openContact()}>Contáctenos</button>
+            </div>
+        </nav>
+    );
 };
 
 const navStyle = {
