@@ -2,7 +2,7 @@ body, html {
   height: 100%;
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-image: url('assets/background.png'); /* Make sure this path is correct */
+  background-image: url('assets/background.png'); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -14,15 +14,14 @@ body, html {
 }
 
 main {
-  flex-grow: 1; /* If you're using flexbox in #root, this will make main take up all available space */
-  display: flex; /* If you want to center your cards horizontally */
-  justify-content: center; /* Centers content horizontally */
-  align-items: flex-start; /* Aligns content to the top */
-  flex-wrap: wrap; /* Allows multiple cards to wrap onto the next line */
-  padding: 1rem; /* Give some space around the content */
+  flex-grow: 1; 
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-start; 
+  flex-wrap: wrap; 
+  padding: 1rem; 
 }
 
-/* Style your NavBar if needed */
 nav {
   background: rgba(0, 0, 0, 0.8);
   padding: 1rem;
@@ -60,14 +59,12 @@ nav a:hover {
   padding: 1rem;
 }
 
-/* Media query para tablet: dos columnas */
 @media (min-width: 768px) {
   .product-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Media query para escritorio: tres columnas */
 @media (min-width: 1024px) {
   .product-list {
     grid-template-columns: repeat(3, 1fr);
@@ -84,18 +81,17 @@ nav a:hover {
   padding: 20px;
   background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Make sure this is above everything else */
+  z-index: 1000; 
 }
 
-/* Backdrop styling */
 .popup-backdrop {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  z-index: 999; /* Directly behind the popup */
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 999; 
 }
 
 

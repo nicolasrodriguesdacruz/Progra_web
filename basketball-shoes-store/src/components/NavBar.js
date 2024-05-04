@@ -9,8 +9,8 @@ const NavBar = ({ openCart, openContact }) => {
                 <span style={titleStyle}>BasketKicks</span>
             </div>
             <div>
-                <button style={linkStyle} onClick={() => openCart()}>Carrito</button>
-                <button style={linkStyle} onClick={() => openContact()}>Contáctenos</button>
+                <button style={linkStyle} onClick={() => openCart()}>Cart</button>
+                <button style={linkStyle} onClick={() => openContact()}>Contact us</button>
             </div>
         </nav>
     );

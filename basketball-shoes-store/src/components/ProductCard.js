@@ -21,13 +21,13 @@ const cardStyle = {
   padding: '1rem',
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
   transition: 'transform 0.3s, box-shadow 0.3s',
-  display: 'flex', // This will allow you to structure the content using flexbox.
-  flexDirection: 'column', // Aligns children (img, h3, p) in a column.
-  alignItems: 'center', // Centers children along the cross axis (horizontal, since direction is column).
-  maxWidth: '300px', // Sets a maximum width for the card.
-  margin: 'auto', // This will center the card in its container if the container is flex as well.
-  textAlign: 'center', // Centers the text inside each child.
-  overflow: 'hidden', // Prevents content from overflowing the set dimensions of the card.
+  display: 'flex', 
+  flexDirection: 'column',
+  alignItems: 'center',
+  maxWidth: '300px', 
+  margin: 'auto', 
+  textAlign: 'center',
+  overflow: 'hidden', 
 };
 
 

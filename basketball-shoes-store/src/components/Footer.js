@@ -13,7 +13,7 @@ const Footer = () => {
         {/* Contact Information */}
         <div style={footerSectionStyle}>
           <h4 style={footerHeadingStyle}>Contact Info</h4>
-          <p style={footerParagraphStyle}>Email: info@example.com</p>
+          <p style={footerParagraphStyle}>Email: basketkicks@gmail.com</p>
           <p style={footerParagraphStyle}>Phone: (123) 456-7890</p>
         </div>
 
@@ -29,7 +29,6 @@ const Footer = () => {
   );
 };
 
-// Styles
 const footerStyle = {
   background: 'rgba(0, 0, 0, 0.85)',
   color: 'white',

@@ -42,42 +42,42 @@ const products = [
     id: 5,
     name: "Nike Kyrie 7",
     price: "130",
-    imageUrl: kyrie7, // Replace with actual image path after adding the image to your project
+    imageUrl: kyrie7, 
     description: "Master the art of quickness with the Kyrie 7, designed for the creative and unpredictable play style."
   },
   {
     id: 6,
     name: "Adidas Harden Vol. 5",
     price: "130",
-    imageUrl: hardenvol5, // Replace with actual image path after adding the image to your project
+    imageUrl: hardenvol5, 
     description: "Unstoppable scoring machine, the Harden Vol. 5 provides a locked-down fit and responsive cushioning."
   },
   {
     id: 7,
     name: "Under Armour Curry 8",
     price: "160",
-    imageUrl: curry8, // Replace with actual image path after adding the image to your project
+    imageUrl: curry8, 
     description: "Feel limitless on the court with the Curry 8, featuring a seamless fit and unmatched traction."
   },
   {
     id: 8,
     name: "Jordan Why Not Zer0.4",
     price: "140",
-    imageUrl: whynotzer04, // Replace with actual image path after adding the image to your project
+    imageUrl: whynotzer04, 
     description: "Make every move count with the Why Not Zer0.4, engineered for explosive direction changes and vertical leaps."
   },
   {
     id: 9,
     name: "Puma Clyde All-Pro",
     price: "120",
-    imageUrl: clydeallpro, // Replace with actual image path after adding the image to your project
+    imageUrl: clydeallpro, 
     description: "Classic meets performance in the Puma Clyde All-Pro, a court-ready shoe with a timeless design."
   },
   {
     id: 10,
     name: "New Balance Kawhi",
     price: "160",
-    imageUrl: kawhi, // Replace with actual image path after adding the image to your project
+    imageUrl: kawhi, 
     description: "Precision and control on the court with the New Balance Kawhi, inspired by the claw himself."
   }
 ];
