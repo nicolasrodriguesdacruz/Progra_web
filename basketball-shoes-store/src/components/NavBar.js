@@ -30,7 +30,7 @@ const logoContainerStyle = {
 };
 
 const logoStyle = {
-  background: transparent,
+  background: 'transparent',
   height: '50px', 
   marginRight: '10px', 
 };
