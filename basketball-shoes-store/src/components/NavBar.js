@@ -30,9 +30,9 @@ const logoContainerStyle = {
 };
 
 const logoStyle = {
-  background: 'transparent',
-  height: '50px', 
-  marginRight: '10px', 
+  background: 'rgba(0, 0, 0, 0)',
+  height: '50px',
+  marginRight: '10px',
 };
 
 const titleStyle = {
