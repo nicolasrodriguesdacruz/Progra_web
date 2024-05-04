@@ -1,50 +1,75 @@
 import React, { useState } from 'react';
 
 const CartPopUp = ({ closeCart }) => {
-  // State to store input values
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [creditCard, setCreditCard] = useState('');
 
-  // Function to handle sending data
-  const handleSend = () => {
-    // Implement what should happen when data is sent
-    console.log('Sending data:', { name, email, creditCard });
-    // You might want to close the cart or clear the form here
-    closeCart();
+  const popupStyle = {
+    background: '#f9f9f9',
+    border: '1px solid #ccc',
+    padding: '20px',
+    borderRadius: '8px',
+    width: '300px',
+    position: 'fixed',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+  };
+
+  const inputStyle = {
+    padding: '10px',
+    margin: '10px 0',
+    width: '100%',
+    boxSizing: 'border-box'
+  };
+
+  const buttonStyle = {
+    padding: '10px 20px',
+    margin: '10px 10px 10px 0',
+    cursor: 'pointer'
+  };
+
+  const sendButtonStyle = {
+    ...buttonStyle,
+    backgroundColor: '#4CAF50',
+    color: 'white',
+    border: 'none'
+  };
+
+  const cancelButtonStyle = {
+    ...buttonStyle,
+    backgroundColor: '#f44336',
+    color: 'white',
+    border: 'none'
   };
 
   return (
-    <div className="popup">
-      {/* Input for name */}
+    <div style={popupStyle}>
       <input
         type="text"
         value={name}
+        style={inputStyle}
         onChange={(e) => setName(e.target.value)}
         placeholder="Enter your name"
       />
-
-      {/* Input for email */}
       <input
         type="email"
         value={email}
+        style={inputStyle}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter your email"
       />
-
-      {/* Input for credit card */}
       <input
         type="text"
         value={creditCard}
+        style={inputStyle}
         onChange={(e) => setCreditCard(e.target.value)}
         placeholder="Enter your credit card number"
       />
-
-      {/* Button to send the purchase data */}
-      <button onClick={handleSend}>Send</button>
-
-      {/* Button to close the popup */}
-      <button onClick={closeCart}>Cancel</button>
+      <button onClick={() => closeCart()} style={sendButtonStyle}>Send</button>
+      <button onClick={closeCart} style={cancelButtonStyle}>Cancel</button>
     </div>
   );
 };
