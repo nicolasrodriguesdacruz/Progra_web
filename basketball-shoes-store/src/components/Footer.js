@@ -7,18 +7,7 @@ const Footer = () => {
         {/* About Section */}
         <div style={footerSectionStyle}>
           <h4 style={footerHeadingStyle}>About Us</h4>
-          <p style={footerParagraphStyle}>We are committed to providing the best experiences and services to our customers. Learn more about what we do and who we are.</p>
-        </div>
-
-        {/* Quick Links Section */}
-        <div style={footerSectionStyle}>
-          <h4 style={footerHeadingStyle}>Quick Links</h4>
-          <ul style={footerListStyle}>
-            <li><a href="/home" style={footerLinkStyle}>Home</a></li>
-            <li><a href="/about" style={footerLinkStyle}>About</a></li>
-            <li><a href="/services" style={footerLinkStyle}>Services</a></li>
-            <li><a href="/contact" style={footerLinkStyle}>Contact</a></li>
-          </ul>
+          <p style={footerParagraphStyle}>We are committed to providing the best experiences and services to our customers. We aim to be the number one basketball shoes eccomerce in the region.</p>
         </div>
 
         {/* Contact Information */}
