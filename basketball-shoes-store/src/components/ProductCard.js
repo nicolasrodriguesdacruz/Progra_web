@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
       <h3>{product.name}</h3>
       <p>{product.description}</p>
       <p>${product.price}</p>
-      {/* Agregar enlace o botón para detalles o añadir al carrito */}
+      <button onClick={() => addToCart(product)}>Comprar</button>  
     </div>
   );
 };
