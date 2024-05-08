@@ -1,15 +1,13 @@
 import React from 'react';
 
-const ProductCard = ({ product }) => {
-  console.log(product.imageUrl);
-
+const ProductCard = ({ product, addToCart }) => {
   return (
     <div style={cardStyle}>
       <img src={product.imageUrl} alt={product.name} style={imageStyle} />
       <h3>{product.name}</h3>
       <p>{product.description}</p>
       <p>${product.price}</p>
-      <button onClick={() => addToCart(product)}>Comprar</button>  
+      <button onClick={() => addToCart(product)}>Comprar</button>
     </div>
   );
 };

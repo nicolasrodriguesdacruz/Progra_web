@@ -22,7 +22,7 @@ const App = () => {
         openContact={() => setIsContactVisible(true)}
         addToCart={addToCart} 
       />
-      <HomePage addToCart={addToCart} /> {/* Assuming HomePage will pass addToCart to ProductCard */}
+      <HomePage addToCart={addToCart} /> 
       
       {isCartVisible && <CartPopUp cartItems={cartItems} closeCart={() => setIsCartVisible(false)} />}
       {isContactVisible && <ContactPopUp closeContact={() => setIsContactVisible(false)} />}
