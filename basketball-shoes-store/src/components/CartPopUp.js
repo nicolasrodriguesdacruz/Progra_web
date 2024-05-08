@@ -40,6 +40,13 @@ const CartPopUp = ({ cartItems, removeFromCart, closeCart }) => {
     border: 'none'
   };
 
+  const handleSubmitOrder = () => {
+    // You can add any validation or processing here before showing the alert
+    console.log("Order submitted", { name, email, creditCard, cartItems });
+    alert(`Thank you, ${name}! Your order has been submitted successfully.`);
+    closeCart(); // Close the cart popup after submitting
+  };
+
   return (
     <div style={popupStyle}>
       <h3>Your Cart</h3>
@@ -74,10 +81,7 @@ const CartPopUp = ({ cartItems, removeFromCart, closeCart }) => {
         placeholder="Enter your credit card number"
         style={inputStyle}
       />
-      <button onClick={() => {
-          console.log("Order submitted", { name, email, creditCard, cartItems });
-          closeCart();
-      }} style={buttonStyle}>Submit Order</button>
+      <button onClick={handleSubmitOrder} style={buttonStyle}>Submit Order</button>
       <button onClick={closeCart} style={buttonStyle}>Cancel</button>
     </div>
   );
