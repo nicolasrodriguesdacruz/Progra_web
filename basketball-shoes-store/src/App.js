@@ -15,17 +15,30 @@ const App = () => {
     setCartItems(prevItems => [...prevItems, product]);
   };
 
+  const removeFromCart = id => {
+    setCartItems(currentItems => currentItems.filter(item => item.id !== id));
+  };
+
   return (
     <>
       <NavBar 
         openCart={() => setIsCartVisible(true)} 
         openContact={() => setIsContactVisible(true)}
-        addToCart={addToCart} 
       />
       <HomePage addToCart={addToCart} /> 
       
-      {isCartVisible && <CartPopUp cartItems={cartItems} closeCart={() => setIsCartVisible(false)} />}
-      {isContactVisible && <ContactPopUp closeContact={() => setIsContactVisible(false)} />}
+      {isCartVisible && (
+        <CartPopUp 
+          cartItems={cartItems} 
+          removeFromCart={removeFromCart}
+          closeCart={() => setIsCartVisible(false)} 
+        />
+      )}
+      {isContactVisible && (
+        <ContactPopUp 
+          closeContact={() => setIsContactVisible(false)} 
+        />
+      )}
 
       <Footer />
     </>

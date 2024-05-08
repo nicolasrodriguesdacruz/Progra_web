@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CartPopUp = ({ cartItems, closeCart }) => {
+const CartPopUp = ({ cartItems, removeFromCart, closeCart }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [creditCard, setCreditCard] = useState('');
@@ -11,13 +11,13 @@ const CartPopUp = ({ cartItems, closeCart }) => {
     padding: '20px',
     borderRadius: '8px',
     width: '90%',
-    maxWidth: '600px', 
+    maxWidth: '600px',
     position: 'fixed',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-    zIndex: 1000, 
+    zIndex: 1000,
   };
 
   const inputStyle = {
@@ -33,14 +33,7 @@ const CartPopUp = ({ cartItems, closeCart }) => {
     cursor: 'pointer'
   };
 
-  const sendButtonStyle = {
-    ...buttonStyle,
-    backgroundColor: '#4CAF50',
-    color: 'white',
-    border: 'none'
-  };
-
-  const cancelButtonStyle = {
+  const removeButtonStyle = {
     ...buttonStyle,
     backgroundColor: '#f44336',
     color: 'white',
@@ -54,6 +47,7 @@ const CartPopUp = ({ cartItems, closeCart }) => {
         cartItems.map(item => (
           <div key={item.id}>
             <p>{item.name} - ${item.price}</p>
+            <button onClick={() => removeFromCart(item.id)} style={removeButtonStyle}>Remove</button>
           </div>
         ))
       ) : <p>Your cart is empty.</p>}
@@ -62,29 +56,29 @@ const CartPopUp = ({ cartItems, closeCart }) => {
       <input
         type="text"
         value={name}
-        style={inputStyle}
         onChange={(e) => setName(e.target.value)}
         placeholder="Enter your name"
+        style={inputStyle}
       />
       <input
         type="email"
         value={email}
-        style={inputStyle}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter your email"
+        style={inputStyle}
       />
       <input
         type="text"
         value={creditCard}
-        style={inputStyle}
         onChange={(e) => setCreditCard(e.target.value)}
         placeholder="Enter your credit card number"
+        style={inputStyle}
       />
       <button onClick={() => {
           console.log("Order submitted", { name, email, creditCard, cartItems });
           closeCart();
-      }} style={sendButtonStyle}>Submit Order</button>
-      <button onClick={closeCart} style={cancelButtonStyle}>Cancel</button>
+      }} style={buttonStyle}>Submit Order</button>
+      <button onClick={closeCart} style={buttonStyle}>Cancel</button>
     </div>
   );
 };

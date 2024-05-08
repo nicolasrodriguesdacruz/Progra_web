@@ -7,7 +7,7 @@ const ProductCard = ({ product, addToCart }) => {
       <h3>{product.name}</h3>
       <p>{product.description}</p>
       <p>${product.price}</p>
-      <button onClick={() => addToCart(product)}>Comprar</button>
+      <button onClick={() => addToCart(product)}>Add to Cart</button>
     </div>
   );
 };
