@@ -10,21 +10,31 @@ const App = () => {
   const [isCartVisible, setIsCartVisible] = useState(false);
   const [isContactVisible, setIsContactVisible] = useState(false);
   const [cartItems, setCartItems] = useState([]);
+  const [confirmationMessage, setConfirmationMessage] = useState('');
 
   const addToCart = (product) => {
     setCartItems(prevItems => [...prevItems, product]);
+    setConfirmationMessage(`${product.name} has been added to the cart!`);
+    setTimeout(() => {
+      setConfirmationMessage('');
+    }, 3000); // Hide the message after 3 seconds
   };
 
-  const removeFromCart = (productId) => {
-    setCartItems(prevItems => prevItems.filter(item => item.id !== productId));
+  const removeFromCart = (id) => {
+    setCartItems(prevItems => prevItems.filter(item => item.id !== id));
   };
 
   return (
     <>
       <NavBar 
         openCart={() => setIsCartVisible(true)} 
-        openContact={() => setIsContactVisible(true)}
+        openContact={() => setIsContactVisible(true)} 
       />
+      {confirmationMessage && (
+        <div className="confirmation-message">
+          {confirmationMessage}
+        </div>
+      )}
       <HomePage addToCart={addToCart} />
       
       {isCartVisible && <CartPopUp cartItems={cartItems} removeFromCart={removeFromCart} closeCart={() => setIsCartVisible(false)} />}
@@ -36,4 +46,5 @@ const App = () => {
 };
 
 export default App;
+
 

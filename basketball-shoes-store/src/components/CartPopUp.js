@@ -51,6 +51,10 @@ const CartPopUp = ({ cartItems, removeFromCart, closeCart }) => {
       alert('Your cart is empty.');
       return;
     }
+    if (!name || !email || !creditCard || cartItems.length === 0) {
+      alert('Please fill out all fields and make sure there are items in your cart.');
+      return;
+    }
     console.log("Order submitted", { name, email, creditCard, cartItems });
     alert(`Thank you, ${name}! Your order has been submitted successfully.`);
     closeCart();
