@@ -9,14 +9,14 @@ import './styles.css';
 const App = () => {
   const [isCartVisible, setIsCartVisible] = useState(false);
   const [isContactVisible, setIsContactVisible] = useState(false);
-  const [cartItems, setCartItems] = useState([]); 
+  const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (product) => {
     setCartItems(prevItems => [...prevItems, product]);
   };
 
-  const removeFromCart = id => {
-    setCartItems(currentItems => currentItems.filter(item => item.id !== id));
+  const removeFromCart = (productId) => {
+    setCartItems(prevItems => prevItems.filter(item => item.id !== productId));
   };
 
   return (
@@ -25,20 +25,10 @@ const App = () => {
         openCart={() => setIsCartVisible(true)} 
         openContact={() => setIsContactVisible(true)}
       />
-      <HomePage addToCart={addToCart} /> 
+      <HomePage addToCart={addToCart} />
       
-      {isCartVisible && (
-        <CartPopUp 
-          cartItems={cartItems} 
-          removeFromCart={removeFromCart}
-          closeCart={() => setIsCartVisible(false)} 
-        />
-      )}
-      {isContactVisible && (
-        <ContactPopUp 
-          closeContact={() => setIsContactVisible(false)} 
-        />
-      )}
+      {isCartVisible && <CartPopUp cartItems={cartItems} removeFromCart={removeFromCart} closeCart={() => setIsCartVisible(false)} />}
+      {isContactVisible && <ContactPopUp closeContact={() => setIsContactVisible(false)} />}
 
       <Footer />
     </>
@@ -46,3 +36,4 @@ const App = () => {
 };
 
 export default App;
+

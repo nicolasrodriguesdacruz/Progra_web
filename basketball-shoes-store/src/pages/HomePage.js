@@ -14,4 +14,3 @@ const HomePage = ({ addToCart }) => {
 };
 
 export default HomePage;
-

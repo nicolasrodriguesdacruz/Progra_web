@@ -18,8 +18,8 @@ const CartPopUp = ({ cartItems, removeFromCart, closeCart }) => {
     transform: 'translate(-50%, -50%)',
     boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
     zIndex: 1000,
-    maxHeight: '80vh', // Limita la altura máxima del popup
-    overflow: 'auto' // Añade desplazamiento si el contenido excede la altura máxima
+    maxHeight: '80vh',
+    overflow: 'auto'
   };
 
   const inputStyle = {
@@ -43,10 +43,9 @@ const CartPopUp = ({ cartItems, removeFromCart, closeCart }) => {
   };
 
   const handleSubmitOrder = () => {
-    // You can add any validation or processing here before showing the alert
     console.log("Order submitted", { name, email, creditCard, cartItems });
     alert(`Thank you, ${name}! Your order has been submitted successfully.`);
-    closeCart(); // Close the cart popup after submitting
+    closeCart();
   };
 
   return (
@@ -56,7 +55,7 @@ const CartPopUp = ({ cartItems, removeFromCart, closeCart }) => {
         {cartItems.length > 0 ? (
           cartItems.map(item => (
             <div key={item.id} style={{ marginBottom: '10px' }}>
-              <p>{item.name} - ${item.price}</p>
+              <p>{item.name} - ${item.price} - Size: {item.size}</p>
               <button onClick={() => removeFromCart(item.id)} style={removeButtonStyle}>Remove</button>
             </div>
           ))
