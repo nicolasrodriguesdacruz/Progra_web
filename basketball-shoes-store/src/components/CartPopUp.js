@@ -43,6 +43,14 @@ const CartPopUp = ({ cartItems, removeFromCart, closeCart }) => {
   };
 
   const handleSubmitOrder = () => {
+    if (!name || !email || !creditCard) {
+      alert('Please fill out all fields.');
+      return;
+    }
+    if (cartItems.length === 0) {
+      alert('Your cart is empty.');
+      return;
+    }
     console.log("Order submitted", { name, email, creditCard, cartItems });
     alert(`Thank you, ${name}! Your order has been submitted successfully.`);
     closeCart();

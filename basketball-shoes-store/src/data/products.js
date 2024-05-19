@@ -7,7 +7,6 @@ import hardenvol5 from '../assets/hardenvol5.jpg';
 import curry8 from '../assets/curry8.jpg';
 import whynotzer04 from '../assets/whynotzer04.jpg';
 import clydeallpro from '../assets/clydeallpro.jpg';
-import kawhi from '../assets/kawhi.jpg';
 
 const products = [
   {
@@ -72,13 +71,6 @@ const products = [
     price: "120",
     imageUrl: clydeallpro, 
     description: "Classic meets performance in the Puma Clyde All-Pro, a court-ready shoe with a timeless design."
-  },
-  {
-    id: 10,
-    name: "New Balance Kawhi",
-    price: "160",
-    imageUrl: kawhi, 
-    description: "Precision and control on the court with the New Balance Kawhi, inspired by the claw himself."
   }
 ];
 
