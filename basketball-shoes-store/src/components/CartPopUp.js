@@ -18,6 +18,8 @@ const CartPopUp = ({ cartItems, removeFromCart, closeCart }) => {
     transform: 'translate(-50%, -50%)',
     boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
     zIndex: 1000,
+    maxHeight: '80vh', // Limita la altura máxima del popup
+    overflow: 'auto' // Añade desplazamiento si el contenido excede la altura máxima
   };
 
   const inputStyle = {
@@ -50,15 +52,16 @@ const CartPopUp = ({ cartItems, removeFromCart, closeCart }) => {
   return (
     <div style={popupStyle}>
       <h3>Your Cart</h3>
-      {cartItems.length > 0 ? (
-        cartItems.map(item => (
-          <div key={item.id}>
-            <p>{item.name} - ${item.price}</p>
-            <button onClick={() => removeFromCart(item.id)} style={removeButtonStyle}>Remove</button>
-          </div>
-        ))
-      ) : <p>Your cart is empty.</p>}
-
+      <div style={{ maxHeight: '40vh', overflowY: 'auto', marginBottom: '20px' }}>
+        {cartItems.length > 0 ? (
+          cartItems.map(item => (
+            <div key={item.id} style={{ marginBottom: '10px' }}>
+              <p>{item.name} - ${item.price}</p>
+              <button onClick={() => removeFromCart(item.id)} style={removeButtonStyle}>Remove</button>
+            </div>
+          ))
+        ) : <p>Your cart is empty.</p>}
+      </div>
       <h3>Enter your details:</h3>
       <input
         type="text"
