@@ -107,3 +107,92 @@ nav a:hover {
 }
 
 
+/* Botones generales */
+button {
+  padding: 10px 20px;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Botones generales */
+button {
+  padding: 10px 20px;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Botones de navegación */
+.nav-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #45a049;
+}
+
+/* Botón de añadir al carrito */
+button.add-to-cart {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button.add-to-cart:hover {
+  background-color: #45a049;
+}
+
+/* Botón de enviar orden */
+button.submit-order {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button.submit-order:hover {
+  background-color: #45a049;
+}
+
+/* Botón de cancelar */
+button.cancel {
+  background-color: #f44336;
+  color: white;
+}
+
+button.cancel:hover {
+  background-color: #e57373;
+}
+
+/* Botón de remover del carrito */
+button.remove {
+  background-color: #f44336;
+  color: white;
+}
+
+button.remove:hover {
+  background-color: #e57373;
+}
+
+/* Mensaje de confirmación */
+.confirmation-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}

@@ -9,8 +9,8 @@ const NavBar = ({ openCart, openContact }) => {
                 <span style={titleStyle}>BasketKicks</span>
             </div>
             <div>
-                <button style={linkStyle} onClick={() => openCart()}>Cart</button>
-                <button style={linkStyle} onClick={() => openContact()}>Contact us</button>
+                <button className="nav-button" onClick={openCart}>Cart</button>
+                <button className="nav-button" onClick={openContact}>Contact us</button>
             </div>
         </nav>
     );
@@ -39,15 +39,6 @@ const titleStyle = {
   fontWeight: 'bold',
   fontSize: '1.5rem',
   color: 'white',
-};
-
-const linkStyle = {
-  color: 'black',
-  textDecoration: 'none',
-  margin: '0 10px',
-  padding: '5px 10px',
-  borderRadius: '5px',
-  transition: 'background-color 0.3s',
 };
 
 export default NavBar;
