@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../assets/logo.png';  
 
-const NavBar = ({ openCart, openContact }) => {
+const NavBar = ({ openCart, openContact, cartItems }) => {
     return (
         <nav style={navStyle}>
             <div style={logoContainerStyle}>
@@ -9,7 +9,9 @@ const NavBar = ({ openCart, openContact }) => {
                 <span style={titleStyle}>BasketKicks</span>
             </div>
             <div>
-                <button className="nav-button" onClick={openCart}>Cart</button>
+                <button className="nav-button" onClick={openCart}>
+                    Cart {cartItems.length > 0 && `(${cartItems.length})`}
+                </button>
                 <button className="nav-button" onClick={openContact}>Contact us</button>
             </div>
         </nav>

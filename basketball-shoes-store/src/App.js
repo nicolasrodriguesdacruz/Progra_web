@@ -17,7 +17,7 @@ const App = () => {
     setConfirmationMessage(`${product.name} has been added to the cart!`);
     setTimeout(() => {
       setConfirmationMessage('');
-    }, 3000); // Hide the message after 3 seconds
+    }, 3000); 
   };
 
   const removeFromCart = (id) => {
@@ -29,6 +29,7 @@ const App = () => {
       <NavBar 
         openCart={() => setIsCartVisible(true)} 
         openContact={() => setIsContactVisible(true)} 
+        cartItems={cartItems} 
       />
       {confirmationMessage && (
         <div className="confirmation-message">
@@ -46,5 +47,3 @@ const App = () => {
 };
 
 export default App;
-
-
